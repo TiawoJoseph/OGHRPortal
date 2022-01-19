@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OgHRPortal</title>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <link href="./css/marketing.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="index-body">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <h1 class="text-center">OGHRPortal</h1>
+        <h5 class="text-center">Welcome!</h5>
+        <h6 >Tools</h6>
+        <a class="nav-link R" id="v-pills-home-tab" data-toggle="pill" href="index.html" role="tab" aria-controls="v-pills-home" aria-selected="false">Dashboard</a>
+        <br />
+        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="days-work.html" role="tab" aria-controls="v-pills-profile" aria-selected="ture">Days Work</a>
+        <br />
+        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="department.html" role="tab" aria-controls="v-pills-messages" aria-selected="false">Department Salaries</a>
+        <br />
+        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="./files.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Employee files</a>
+        <br />
+        <br />
+        <br />
+        <br />
+        <button type="button" class="btn btn-warning">LOGOUT</button>
+    </div>
+
+
+
+
+
+
+      <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <h1 class="text-center">Department Salaries</h1>
+       
+              <br />
+              <br />
+        <p class="department-name"> I.T
+            (39)</p>
+
+        <div class="Emp-cards container">
+            <div class="emp-card-content " id="card-content">
+           
+          
+            
+        </div>
+        </div>
+        </div>
+
+
+
+        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+        <h1> </h1>
+        </div>
+        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+      </div>
+</div>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAPMnMWc0ROBn-XuKOqO9Tx0XUIHeAXb5Q",
+      authDomain: "oghrportal.firebaseapp.com",
+      databaseURL: "https://oghrportal-default-rtdb.firebaseio.com",
+      projectId: "oghrportal",
+      storageBucket: "oghrportal.appspot.com",
+      messagingSenderId: "297934457462",
+      appId: "1:297934457462:web:460f1f3c9cedff2f5c6d57"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore()
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+  <script src="./it.js"></script>
+</body>
+</html>
